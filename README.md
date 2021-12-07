@@ -11,9 +11,8 @@ Resolve recaptcha V3:
 4) Add your own AKI_KEY in `settings.py` (line 2): `CAPTCHA_API_KEY = 'AKI_KEY'`
 
 Settings:
-1) In `settings.py` put your own CSRFTOKEN, COOKIE : `CSRFTOKEN = 'csrf here'`, `COOKIE = 'cookie here'`
-2) In `settings.py` in `headers` put your `bnc-uuid`, `device-info` and `user-agent`
-3) Set your proxy ![image](https://user-images.githubusercontent.com/84085341/135763230-856faf92-ab73-4670-bb40-fbc3f91667ff.png)
+1) In `settings.py` put your own CSRFTOKEN, COOKIE, USER_AGENT, DEVICE_INFO, BNC_UUID: `CSRFTOKEN = 'csrf here'`, `COOKIE = 'cookie here'`, `BNC_UUID = 'bnc-uuid here'`, `DEVICE_INFO = 'device-info here'` and `USER_AGENT = 'user-agent here'`
+2) Set your proxy ![image](https://user-images.githubusercontent.com/84085341/135763230-856faf92-ab73-4670-bb40-fbc3f91667ff.png)
 
 
 E.g. go here - https://www.binance.com/en/nft/blindBox/detail?productId=139168165799316480
