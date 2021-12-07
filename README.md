@@ -11,7 +11,12 @@ Resolve recaptcha V3:
 4) Add your own AKI_KEY in `settings.py` (line 2): `CAPTCHA_API_KEY = 'AKI_KEY'`
 
 Settings:
-1) In `settings.py` put your own CSRFTOKEN, COOKIE, USER_AGENT, DEVICE_INFO, BNC_UUID: \n `CSRFTOKEN = 'csrf here'`,\n `COOKIE = 'cookie here'`,\n `BNC_UUID = 'bnc-uuid here'`,\n `DEVICE_INFO = 'device-info here'`,\n `USER_AGENT = 'user-agent here'`
+1) In `settings.py` put your own CSRFTOKEN, COOKIE, USER_AGENT, DEVICE_INFO, BNC_UUID:
+        `CSRFTOKEN = 'csrf here'`,
+        `COOKIE = 'cookie here'`,
+        `USER_AGENT = 'user-agent here'`,
+        `DEVICE_INFO = 'device-info here'`,
+        `BNC_UUID = 'bnc-uuid here'`
 2) Set your proxy ![image](https://user-images.githubusercontent.com/84085341/135763230-856faf92-ab73-4670-bb40-fbc3f91667ff.png)
 
 
