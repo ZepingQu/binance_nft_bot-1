@@ -12,6 +12,7 @@ Resolve recaptcha V3:
 
 Settings:
 1) In `settings.py` put your own CSRFTOKEN, COOKIE, USER_AGENT, DEVICE_INFO, BNC_UUID:
+
         `CSRFTOKEN = 'csrf here'`,
         `COOKIE = 'cookie here'`,
         `USER_AGENT = 'user-agent here'`,
@@ -36,7 +37,7 @@ Start:
 
 Thats all!
 
-developer: Matvey Semenov
+original developer: Matvey Semenov
 
 telegram: @matvey_dev
 
