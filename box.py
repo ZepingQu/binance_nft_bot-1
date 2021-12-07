@@ -5,6 +5,7 @@ from datetime import datetime
 from typing import Optional, Union
 
 import requests
+from pprint import pprint
 
 from handlers import event_is_not_over
 from schemas import Body
@@ -24,13 +25,13 @@ class BaseBox:
         avalible_boxes = defaultdict(dict)
         boxes = self.get_list_boxes()
         box_num = 0
-
         for box in boxes:
             product_id = box['productId']
             response = requests.get(self._box_info + product_id, headers=headers).json()['data']
             status = box['status']
             name = box['name']
             selling_delay = response['secondMarketSellingDelay']
+            start_time = datetime.fromtimestamp(response["startTime"]/1000)
             limit_amount = response['limitPerTime']
 
             if event_is_not_over(status):
@@ -39,15 +40,15 @@ class BaseBox:
                     'name': name,
                     'product_id': product_id,
                     'selling_delay': selling_delay,
+                    'start_time': start_time,
                     'limit_amount': limit_amount
                 }
-
         return avalible_boxes
 
     @staticmethod
     def log_info_boxes(avalible_boxes: dict) -> None:
         for box_num, value in avalible_boxes.items():
-            print(f'{box_num}. {value["name"]}\n  Selling delay on market: {value["selling_delay"]} hours\n')
+            print(f'{box_num}. {value["name"]}\n\n  Selling start time: {value["start_time"]}\n  Current time: {datetime.today()}\n  Selling delay on market: {value["selling_delay"]} hours\n\n')
 
 
 class Box(BaseBox):

@@ -52,5 +52,5 @@ def send_requests_to_buy(box, start_sale_time: datetime, product_id: str):
             for thread in threads:
                 thread.join()
 
-            print('Sale has been ended')
+            print('Sale has ended')
             sys.exit(0)
