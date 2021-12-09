@@ -1,20 +1,21 @@
+# Maximum request times, follow the limit update from Binance to avoid being banned
 COUNT_REQUESTS = 150
 
 # Give it here - https://2captcha.com/enterpage
 CAPTCHA_API_KEY = ''
 
-BINANCE_SITEKEY = '6LeUPckbAAAAAIX0YxfqgiXvD3EOXSeuq0OpO8u_'
-
-# Yours own proxy here `username:password@ip:port` [NOT REQUIRE]
+# Yours own proxy here `username:password@ip:port` [NOT REQUIRED]
 PROXY = ''
 
-
+# Login info, check your Fetch/XHR -> auth
 BNC_UUID = ''
 COOKIE = ''
 CSRFTOKEN = ''
 DEVICE_INFO = ''
 USER_AGENT = ''
 
+# Don't touch atm
+BINANCE_SITEKEY = '6LeUPckbAAAAAIX0YxfqgiXvD3EOXSeuq0OpO8u_'
 
 headers = {
     "accept": "*/*",
