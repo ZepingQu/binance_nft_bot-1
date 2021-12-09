@@ -8,12 +8,13 @@ BINANCE_SITEKEY = '6LeUPckbAAAAAIX0YxfqgiXvD3EOXSeuq0OpO8u_'
 # Yours own proxy here `username:password@ip:port` [NOT REQUIRE]
 PROXY = ''
 
+
+BNC_UUID = ''
 CSRFTOKEN = ''
 COOKIE = ''
-
-USER_AGENT = ''
 DEVICE_INFO = ''
-BNC_UUID = ''
+USER_AGENT = ''
+
 
 headers = {
     "accept": "*/*",
