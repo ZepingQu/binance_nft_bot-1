@@ -10,8 +10,8 @@ PROXY = ''
 
 
 BNC_UUID = ''
-CSRFTOKEN = ''
 COOKIE = ''
+CSRFTOKEN = ''
 DEVICE_INFO = ''
 USER_AGENT = ''
 
