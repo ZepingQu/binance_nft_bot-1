@@ -21,6 +21,7 @@ class BaseBox:
     def get_list_boxes(self) -> dict:
         return requests.get(self._box_list).json()['data']
 
+    @property
     def get_avalible_boxes(self) -> dict:
         avalible_boxes = defaultdict(dict)
         boxes = self.get_list_boxes()
@@ -33,6 +34,7 @@ class BaseBox:
             selling_delay = response['secondMarketSellingDelay']
             start_time = datetime.fromtimestamp(response["startTime"]/1000)
             limit_amount = response['limitPerTime']
+            sec_till_sale = start_time - datetime.today()
 
             if event_is_not_over(status):
                 box_num += 1
@@ -41,6 +43,7 @@ class BaseBox:
                     'product_id': product_id,
                     'selling_delay': selling_delay,
                     'start_time': start_time,
+                    'sec_till_sale': sec_till_sale,
                     'limit_amount': limit_amount
                 }
         return avalible_boxes
@@ -48,7 +51,7 @@ class BaseBox:
     @staticmethod
     def log_info_boxes(avalible_boxes: dict) -> None:
         for box_num, value in avalible_boxes.items():
-            print(f'{box_num}. {value["name"]}\n\n  Selling start time: {value["start_time"]}\n  Current time: {datetime.today()}\n  Selling delay on market: {value["selling_delay"]} hours\n\n')
+            print(f'{box_num}. {value["name"]}\n\n  Selling start time: {value["start_time"]}\n  Time untill sale: {value["sec_till_sale"]}\n  Selling delay on market: {value["selling_delay"]} hours\n\n')
 
 
 class Box(BaseBox):

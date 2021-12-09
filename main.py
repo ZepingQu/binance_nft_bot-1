@@ -5,7 +5,7 @@ if __name__ == "__main__":
     headers_is_right()
 
     box_info = BaseBox()
-    avalible_boxes = box_info.get_avalible_boxes()
+    avalible_boxes = box_info.get_avalible_boxes
     box_info.log_info_boxes(avalible_boxes)
 
     selected_box = str(input('\nIndex of box: '))
